@@ -1,0 +1,30 @@
+{{#each certaPessoa}}
+<div class="jumbotron">
+    <div class="card">
+        <img src="https://www.americanaircraftsales.com/wp-content/uploads/2016/09/no-profile-img.jpg" class="card-img-top" alt="fotoDePerfilDe{{nome}}">
+        <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-user-circle mr-3"></i>{{nome}} {{sobrenome}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-globe-americas mr-3"></i>{{pais}}</h6>
+            <hr>
+          <p class="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fas fa-venus-mars mr-3"></i>{{genero}}</li>
+            <li class="list-group-item"><i class="fas fa-envelope-open-text mr-3"></i>{{email}}</li>
+            <li class="list-group-item"><i class="fas fa-building mr-3"></i>{{empresa}}</li>
+            <li class="list-group-item"><i class="fas fa-money-check-alt mr-3"></i>R$ {{salario}}</li>
+        </ul>
+    </div>
+</div>
+{{/each}}
+<style>
+    .jumbotron > .card{
+        width: 18rem;
+    }
+    @media (max-width: 600px){
+        .jumbotron > .card {
+            width: 100%;
+        }
+    } 
+</style>

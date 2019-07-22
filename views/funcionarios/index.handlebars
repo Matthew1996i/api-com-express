@@ -1,0 +1,20 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Lista de funcionarios</h1>
+    <p class="lead">Aqui estão listados os funcionario, para saber mais sobre um funcionario, clique em "Sobre".</p>
+  </div>
+</div>
+<hr/>
+<ul class="list-group">
+    {{#each funcionario}}
+        <div class="input-group mb-2 pr-3">
+            <input type="text" class="form-control" aria-describedby="button-addon2" value="Funcionario: {{nome}} {{sobrenome}}" disabled>
+            <div class="input-group-append">
+                <a href="/funcionarios/{{id}}" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Veja mais sobre esse funcionario" role="button"><i class="fas fa-info mr-2"></i>Sobre</a>
+            </div>
+        </div>
+    {{/each}}
+</ul>
+
+
